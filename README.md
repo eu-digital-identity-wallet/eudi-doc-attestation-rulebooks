@@ -20,8 +20,10 @@ Each rulebook includes schema definitions, trust and assurance requirements, and
 eudi-doc-attestation-rulebooks/
 │
 ├── rulebooks/
-│   ├── rulebook-<usecase1>.md
-│   ├── rulebook-<usecase2>.md
+│   ├── <usecase1>
+│       ├── rulebook-<usecase1>.md
+│   ├── <usecase2>
+│       ├── rulebook-<usecase2>.md
 │   └── ...
 │
 └── template/
