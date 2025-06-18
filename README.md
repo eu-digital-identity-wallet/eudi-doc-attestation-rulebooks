@@ -20,12 +20,12 @@ Each rulebook includes schema definitions, trust and assurance requirements, and
 eudi-doc-attestation-rulebooks/
 │
 ├── rulebooks/
-│   ├── rulebook-<usecase1>.yaml
-│   ├── rulebook-<usecase2>.yaml
+│   ├── rulebook-<usecase1>.md
+│   ├── rulebook-<usecase2>.md
 │   └── ...
 │
 └── template/
-    └── attestation-rulebook-template.yaml
+    └── attestation-rulebook-template.md
 ```
 
 * `rulebooks/`: Contains finalized or draft rulebooks for specific use cases (e.g., driving license, educational credentials, social security).
@@ -33,7 +33,7 @@ eudi-doc-attestation-rulebooks/
 
 ## 📄 Rulebook Template
 
-The `attestation-rulebook-template.yaml` defines the standard structure that all rulebooks must follow. Key sections include:
+The `attestation-rulebook-template.md` defines the standard structure that all rulebooks must follow. Key sections include:
 
 * item 1
 * item 2
@@ -45,7 +45,7 @@ This template aligns with the requirements outlined in Implementing Regulation (
 
 To propose a new rulebook:
 
-1. Copy the template from `template/attestation-rulebook-template.yaml`.
+1. Copy the template from `template/attestation-rulebook-template.md`.
 2. Fill in all required sections with valid and justifiable content.
 3. Submit your rulebook via a pull request under the `rulebooks/` directory.
 4. Make sure to align with relevant standards listed in the [Architecture and Reference Framework](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/latest/architecture-and-reference-framework-main/)
