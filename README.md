@@ -1,4 +1,4 @@
-# EUDI Wallet – Attestation Rulebooks Repository
+# EUDI Wallet – Attestation Rulebooks Catalog
 
 This repository contains the official **attestation rulebooks** used in the European Digital Identity (EUDI) Wallet framework. These rulebooks define the structure, semantics, and validation requirements for **Electronic Attestations of Attributes (EAAs)** that are issued to and used within EUDI Wallets, as mandated by Regulation (EU) No 910/2014 (eIDAS) and the related Implementing Regulations.
 
