@@ -1,19 +1,58 @@
 
 # Attestation Rulebook template
 
+*Provide information about the author(s) of this Rulebook in the following form:*
+
+* Author(s): 
+    * [NAME SURNAME, AFFILIATION]
+    * [NAME SURNAME, AFFILIATION]
+* Previous Authors
+    * [NAME SURNAME, AFFILIATION (versions)]
+    * [NAME SURNAME, AFFILIATION (versions)]
+
+*Provide versioning information about the Rulebook in the following form:*
+
+| Version | Date | Description |
+|---------|------------|------------|
+| [VERSION NUMBER] | [PUBLICATION DATE] | [DESCRIPTION OR LINK TO THE CHANGELOG] |
+| [VERSION NUMBER] | [PUBLICATION DATE] | [DESCRIPTION OR LINK TO THE CHANGELOG] |
+
+*Provide a contact email address and/or a link to an issue tracking system that can be used for
+providing feedback, e.g.:* 
+
+**Feedback:**
+  *  https://example.com/tracker 
+
 ## 1 Introduction
 
-### 1.1 Document scope
+### 1.1 Document scope and purpose
 
-Describe the scope of this document
+*Provide a concise explanation of the purpose of the defined attestation type, explicitly stating 
+why it exists and what its primary objective is within the context of the EUDI Wallet ecosystem*
 
 ### 1.2 Document structure
 
-Describe the structure of this document
+*Provide a brief overview of the Rulebook's sections and their purpose. The main
+sections of the Rulebook SHOULD be*
+
+- Chapter 2, which describes the attestation attributes and metadata in an 
+encoding-independent manner. 
+metadata on a generic level, regardless of the encoding used for the PID. Most
+of the content of this chapter is a direct copy of the Annex of Commission
+Implementing Regulation 2024/2977 on PID and EAA. However, a few additional
+attributes are specified in this chapter.
+- Chapter 3, which specifies how the attestation
+attributes and metadata are encoded in case the attestation complies with [ISO/IEC
+18013-5].
+- Chapter 4, which specifies how the attestation
+attributes and metadata are encoded in case the attestation complies with [SD-JWT VC].
+- Chapter 5, which specifies how the attestation
+attributes and metadata are encoded in case the attestation complies with [W3C VCDM v2.0].
+- Chapter 6, which specifies attestation usage
 
 ### 1.3 Key words
 
-The following are the recommended keywords. Modify if necessary
+*The following are the recommended keywords. Modify if necessary*
 
 This document uses the capitalised key words 'SHALL', 'SHOULD' and 'MAY' as
 specified in [RFC 2119], i.e., to indicate requirements, recommendations and
@@ -27,8 +66,8 @@ statements of fact.
 
 ### 1.4 Terminology
 
-It is recommended to use the terminology defined in Annex 1 of ARF. For example
-the following text can be used. 
+*It is recommended to use the terminology defined in Annex 1 of ARF. For example
+the following text can be used.* 
 
 This document uses the terminology specified in Annex 1 of the ARF.
 
@@ -92,7 +131,9 @@ on the nature of the mechanism used for distributing trust anchors, detailed in 
 
 ### 2.1 Introduction
 
-Briefly introduce the design choice made for this attestation type. 
+Briefly introduce the overall design and purpose of the specific attestation type 
+defined by this Rulebook, including key decisions regarding its attributes and 
+legal categorization. 
 
 According to Annex V point a) and  Annex VII point a) of the [European Digital Identity Regulation]
 an indication, at least in a form suitable for automated processing, that the attestation 
@@ -155,7 +196,7 @@ trust anchor(s) of the EAA Providers issuing this type of EAA.
 
 
 ### 2.9 Revocation
-(see topic 7)
+(see Topic 7 of Annex 2 of the ARF)
 In this section information about the revocation mechanism used SHALL be defined. 
 
 For PID, QEAA, or PuB-EAA it SHALL  be defined whether  only short-lived attestations 
