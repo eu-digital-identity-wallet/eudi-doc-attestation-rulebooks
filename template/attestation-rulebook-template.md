@@ -181,13 +181,13 @@ avoid natural language ambiguities.*
 
 | **Data Identifier** | **Definition** |**Data type** |**Example value** |
 |------------------------|--------------|--------------|--------------|
-| *Provide a value* | *Provide succinct text*|*Provide a value.*|*Give an example value*
+| *Provide a value* | *Provide succinct text*|*Provide a value*|*Provide a value*
 
 ### 2.7 Conditional metadata 
 
 | **Data Identifier** | **Definition** |**Data type** |**Example value** |
 |------------------------|--------------|--------------|--------------|
-| *Provide a value* | *Provide succinct text*|*Provide a value.*|*Give an example value*
+| *Provide a value* | *Provide succinct text*|*Provide a value*|*Provide a value*
 
 
 # 3 Attestation encoding 
