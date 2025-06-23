@@ -124,7 +124,7 @@ the [European Digital Identity Regulation] SHOULD be defined (see ARB_19 in [Top
 version of the trust anchor to be used for verifying the EAA can be found or
 looked up SHOULD be defined. What this location indicates precisely is dependent 
 on the nature of the mechanism used for distributing trust anchors, detailed in section 
-2.6 (see ARB_21 in [Topic 12])
+5 (see ARB_21 in [Topic 12])
 
 ### 2.1 Introduction
 
@@ -155,39 +155,39 @@ avoid natural language ambiguities.*
 
 | **Data Identifier** | **Definition** |**Data type** |**Example value** |
 |------------------------|--------------|--------------|--------------|
-| *Provide a value* | *Provide succinct text*|*Provide a value.*|*Provide succinct text*
+| *Provide a value* | *Provide succinct text*|*Provide a value*|*Provide a value*
 
 
 ### 2.3 Optional attributes
 
 | **Data Identifier** | **Definition** |**Data type** |**Example value** |
 |------------------------|--------------|--------------|--------------|
-| *Provide a value* | *Provide succinct text*|*Provide a value.*|*Provide succinct text*
+| *Provide a value* | *Provide succinct text*|*Provide a value*|*Provide a value*
 
 ### 2.4 Conditional attributes
 
 | **Data Identifier** | **Definition** |**Data type** |**Example value** |
 |------------------------|--------------|--------------|--------------|
-| *Provide a value* | *Provide succinct text*|*Provide a value.*|*Provide succinct text*
+| *Provide a value* | *Provide succinct text*|*Provide a value*|*Provide a value*
 
 ### 2.5 Mandatory metadata 
 
 | **Data Identifier** | **Definition** |**Data type** |**Example value** |
 |------------------------|--------------|--------------|--------------|
-| *Provide a value* | *Provide succinct text*|*Provide a value.*|*Provide succinct text*
+| *Provide a value* | *Provide succinct text*|*Provide a value*|*Provide a value*
 
 
 ### 2.6 Optional metadata 
 
 | **Data Identifier** | **Definition** |**Data type** |**Example value** |
 |------------------------|--------------|--------------|--------------|
-| *Provide a value* | *Provide succinct text*|*Provide a value.*|*Provide succinct text*
+| *Provide a value* | *Provide succinct text*|*Provide a value.*|*Give an example value*
 
 ### 2.7 Conditional metadata 
 
 | **Data Identifier** | **Definition** |**Data type** |**Example value** |
 |------------------------|--------------|--------------|--------------|
-| *Provide a value* | *Provide succinct text*|*Provide a value.*|*Provide succinct text*
+| *Provide a value* | *Provide succinct text*|*Provide a value.*|*Give an example value*
 
 
 # 3 Attestation encoding 
@@ -354,7 +354,7 @@ referenced documents SHALL be approved by an EU standardisation body or by the E
 Digital Identity Cooperation Group established pursuant to Article 46e(1) of the 
 [European Digital Identity Regulation] (see ARB_04 in [Topic 12]).*
 
-Finally, illustrative examples SHALL be included. 
+*Finally, illustrative examples SHALL be included.*
 
 [RULEBOOK AUTHOR TO PROVIDE HUMAN READABLE EXAMPLE OF THE ISSUED ATTESTATION]
 
@@ -370,20 +370,45 @@ it SHOULD be defined what other key obligations does a Relying Party have when p
 this attestation type (e.g., signature verification, freshness checks)*
 
 *Furthermore, provide potential presentation requirements, e.g., are there specific 
-requirements for how this attestation must be presented (e.g., online, offline, specific protocols)?"
+requirements for how this attestation must be presented (e.g., online, offline, specific protocols)?"*
 
 *Finally, in this section information about potential transactional data
 SHALL be defined (see [Topic 20] of Annex 2 of the ARF).*
 
 ## 5 Trust anchors
 
-Mechanisms for the provision of a trust anchor that SHALL
-be used for the verification of an attestation SHALL be defined in this section.
-Furthermore,  for non-qualified EAA  in this section SHOULD  be defined (see ARB_26 in [Topic 12] , ISSU_34 of [Topic 10]):
-* mechanisms allowing a Wallet Unit to verify that the EAA Provider is authorised 
-or registered to issue this type of EAA.
-* mechanisms allowing a Relying Party to obtain, in a trustworthy manner, the 
-trust anchor(s) of the EAA Providers issuing this type of EAA.
+*Mechanisms for the provision of a trust anchor that SHALL
+be used for the verification of an attestation SHALL be defined in this section.*
+
+*It is noted that the ARF specifies the following for QEAAs and Pub-EAAs*
+
+> To do this for [...] QEAAs the Relying Party Instance uses a trust anchor of 
+the Provider obtained from a Trusted List. Note that the PID Provider or QEAA 
+Provider may use an intermediate signing certificate to sign the PID or 
+attestation, and use the trust anchor to sign the signing certificate, instead 
+of signing the PID or attestation directly with the trust anchor.
+
+> For PuB-EAAs, the Relying Party Instance verifies a PuB-EAA by first 
+verifying the signature of the PuB-EAA Provider over the PuB-EAA, using the 
+PuB-EAA Provider certificate issued by a QTSP. Subsequently, the Relying Party 
+Instance verifies the signature over this certificate, using the corresponding 
+trust anchor from the QTSP Trusted List. Note that both the PuB-EAA Provider 
+and the QTSP may use an intermediate signing certificate. All other things 
+being equal, the verification of a PuB-EAA will therefore involve one or more 
+extra certificates, compared to the verification of a PID or QEAA.
+
+*For non-qualified EAA in this section it SHOULD  be defined (see ARB_26 in [Topic 12])
+how the attributes or metadata representing the location at which a machine-readable 
+version of the trust anchor to be used for verifying the attestation can be found,
+specified in section 2, are used. This includes, a detailed description about how
+a Relying Party can obtain the trust anchor, as well as a detailed description about
+how this trust anchor can be used for verifying that the provider is authorized
+to issue the attestation. Additionally, for non-qualified EAA Provider this section
+MAY include a description of mechanisms that can be used by a Wallet Unit for
+verifying that the provider is authorized to issue this type of attestation (see 
+ISSU_34 in [Topic 10])*
+
+
 
 
 ## 6 Revocation
@@ -411,6 +436,8 @@ general EUDI framework, ARF, and relevant regulations*
 | **Item Reference** | **Standard name/details**|
 |--------------------|---------------------------|
 | [European Digital Identity Regulation] | [Regulation (EU) 2024/1183](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401183) of the European Parliament and of the Council of 11 April 2024 amending Regulation (EU) No 910/2014 as regards establishing the European Digital Identity Framework |
+| [HAIP] | Yasuda, K. *et al,* OpenID4VC High Assurance Interoperability Profile, OpenId Foundation, Version draft-03 |
+| [IANA-JWT-Claims] | IANA JSON Web Token Claims Registry. Available: <https://www.iana.org/assignments/jwt/jwt.xhtml> |
 | [ISO/IEC 18013-5] |  ISO/IEC 18013-5, Personal identification --- ISO-compliant driving licence - Part 5: Mobile driving licence (mDL) application, First edition, 2021-09 |
 | [OIDC] | Sakimura, N. et al., "OpenID Connect Core 1.0", OpenID Foundation. Available: <https://openid.net/specs/openid-connect-core-1_0.html> |
 | [RFC 3339] | RFC 3339  - Date and Time on the Internet: Timestamps, G. Klyne et al., July 2002 |
@@ -423,8 +450,7 @@ general EUDI framework, ARF, and relevant regulations*
 | [Topic 12] | ARF Annex 2 - Topic 12 - Attestation Rulebooks, Available: <https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/latest/annexes/annex-2/annex-2-high-level-requirements/#a2312-topic-12-attestation-rulebooks>|
 | [Topic 20] | ARF Annex 2 - Strong User authentication for electronic payments, Available: <https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/latest/annexes/annex-2/annex-2-high-level-requirements/#a2320-topic-20-strong-user-authentication-for-electronic-payments>|
 | [W3C VCDM v2.0] | Sporny, M. *et al,* Verifiable Credentials Data Model v2.0, W3C Recommendation.  |
-| [HAIP] | Yasuda, K. *et al,* OpenID4VC High Assurance Interoperability Profile, OpenId Foundation, Version draft-03 |
-| [IANA-JWT-Claims] | IANA JSON Web Token Claims Registry. Available: <https://www.iana.org/assignments/jwt/jwt.xhtml> |
+
 
 
 
